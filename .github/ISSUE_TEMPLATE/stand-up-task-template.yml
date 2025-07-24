@@ -1,0 +1,81 @@
+# 📁 Path: .github/ISSUE_TEMPLATE/stand-up-task-template.yml
+
+name: 📌 Stand-Up Lockport Task
+description: Create a task card for the Stand-Up Lockport project board
+title: "[Task] "
+labels: ["task"]
+assignees: []
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 📝 Task Summary
+      description: Provide a clear and concise summary of the task.
+      placeholder: e.g., Coordinate volunteer training session for canvassing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚦 Priority Level
+      description: How urgent is this task?
+      options:
+        - 🟥 Critical
+        - 🟧 High
+        - 🟨 Medium
+        - 🟩 Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: line-of-effort
+    attributes:
+      label: 🧭 Line of Effort
+      description: Which strategic line of effort does this align with?
+      options:
+        - 🎓 Educate
+        - 🗳️ Vote
+        - 📣 Advocate
+        - 🧰 Infrastructure & Tools
+        - 🧑‍🤝‍🧑 Community Building
+        - ❓ Unsure / General
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 📋 Task Details
+      description: Add more context, links, or resources relevant to the task.
+      placeholder: e.g., Needs coordination with voter registration lead, training doc linked here...
+    validations:
+      required: false
+
+  - type: input
+    id: location
+    attributes:
+      label: 📍 Location (if applicable)
+      description: Is this task tied to a physical location or district?
+      placeholder: e.g., Lockport Library or District 12
+    validations:
+      required: false
+
+  - type: input
+    id: due-date
+    attributes:
+      label: 📅 Target Due Date
+      description: When would we ideally like this completed?
+      placeholder: e.g., 2025-08-10
+    validations:
+      required: false
+
+  - type: input
+    id: lead
+    attributes:
+      label: 👤 Assigned Lead
+      description: Who is responsible for moving this forward?
+      placeholder: e.g., Luke, Jocelyn, or TBD
+    validations:
+      required: false
